@@ -1,0 +1,8 @@
+{
+  "name": "Funil RH lista",
+  "description": "Formulário de qualificação e seleção para candidatos à vaga de Closer de Vendas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
