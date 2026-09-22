@@ -1607,7 +1607,7 @@ function doGet(e) {
                         type="text"
                         value={integrationConfig.redirectUrl || ''}
                         onChange={(e) => saveConfig({ ...integrationConfig, redirectUrl: e.target.value })}
-                        placeholder="https://contato.seracacau.com.br/"
+                        placeholder="https://agradecimento.seracacau.com.br/"
                         className="w-full text-xs font-mono bg-[#0D0D0D] border border-white/10 rounded-xl px-3 py-2 text-white"
                       />
                     </div>

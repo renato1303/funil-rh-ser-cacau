@@ -26,7 +26,7 @@ export default function App() {
   const [validationError, setValidationError] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
-  const [computedRedirectUrl, setComputedRedirectUrl] = useState<string>("https://contato.seracacau.com.br/");
+  const [computedRedirectUrl, setComputedRedirectUrl] = useState<string>("https://agradecimento.seracacau.com.br/");
   
   // Booking/Scheduling States
   const [bookedMeeting, setBookedMeeting] = useState<BookedMeeting | null>(null);
@@ -401,7 +401,7 @@ export default function App() {
     
     // Redirect to configured URL in Admin Panel (or default)
     const config: IntegrationConfig = getResolvedIntegrationsConfig();
-    const targetRedirect = config.redirectUrl || "https://contato.seracacau.com.br/";
+    const targetRedirect = config.redirectUrl || "https://agradecimento.seracacau.com.br/";
     
     // Build search query parameters with complete lead details so external apps receive all data
     const plainTextMessage = buildFormattedMessageText(safeLead);
