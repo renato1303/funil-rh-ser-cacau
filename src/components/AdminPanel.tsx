@@ -1517,8 +1517,16 @@ export default function AdminPanel({ onClose }: AdminPanelProps) {
                         <div className="mt-2 p-3 bg-[#000000] border border-white/10 rounded-xl text-[10px] font-mono text-emerald-400 overflow-x-auto select-all">
 {`function doPost(e) {
   try {
-    var jsonString = e.postData ? e.postData.contents : "";
-    var data = jsonString ? JSON.parse(jsonString) : {};
+    var data = {};
+    if (e.postData && e.postData.contents) {
+      try {
+        data = JSON.parse(e.postData.contents);
+      } catch(err) {
+        data = { raw: e.postData.contents };
+      }
+    } else if (e.parameter) {
+      data = e.parameter;
+    }
     var lead = data.lead || data || {};
     
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
